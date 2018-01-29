@@ -1,0 +1,22 @@
+{
+  "name": "api-with-node-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js",
+    "scss": "cd ./public/styles/src && sass --watch style.scss:../style.css --sourcemap=none"
+  },
+  "author": "Keith Mitchell <keith.mitchell@live.ca> (http://keithcod.es)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "moment": "^2.20.1",
+    "pug": "^2.0.0-rc.4",
+    "twit": "^2.2.9"
+  }
+}

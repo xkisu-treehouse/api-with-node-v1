@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    link(rel='stylesheet', href='styles/style.css')
+  body
+    header
+      img(src='./img/twitter.svg')
+      h1='@'+user.screen_name
+    main
+      div.timeline
+        h1 Timeline
+        div.tweets
+          for tweet in tweets
+            div.tweet
+              div.photo
+                img(src=tweet.user.profile_image_url)
+              div.details
+                header
+                  div
+                    h1=tweet.user.name
+                    a(href=tweet.user.url)='@'+tweet.user.screen_name
+                  h3.time=tweet.created_at
+                p=tweet.text
+      div.following
+        h1 Following
+        div.followers
+          for friend in friends
+            div.follower
+              div.details
+                img(src=friend.profile_image_url)
+                div.names
+                  h1=friend.name
+                  a(href=friend.url)='@'+friend.screen_name
+      div.dms
+        h1 Direct Messages
+        div.alldadms
+          for dm in dms
+            div.dm
+              img(src=dm.sender.profile_image_url)
+              div
+                p=dm.text
+                h3=dm.created_at
+    //- footer

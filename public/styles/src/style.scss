@@ -1,0 +1,231 @@
+@import '_reset';
+@import '_flex';
+@import 'https://fonts.googleapis.com/css?family=Work+Sans:400,600';
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: "Work Sans", sans-serif !important;
+}
+
+body  {
+    @include flexbox;
+    @include flex-direction(column);
+    
+    >header {
+        height: 65px;
+        @include flex(0,0,65px);
+        background: #1da1f2;
+        padding: 18px;
+        box-sizing: border-box;
+        >* {
+            display: inline-block;
+        }
+        img {
+            height: 100%;
+            margin-right: 15px;
+        }
+        h1 {
+            line-height: 27px;
+            vertical-align: top;
+            font-size: 18px;
+            font-weight: normal;
+            color: rgba(255, 255, 255, 0.5);
+            -webkit-transition: color 0.2s;
+            -moz-transition: color 0.2s;
+            -ms-transition: color 0.2s;
+            -o-transition: color 0.2s;
+            transition: color 0.2s;
+        }
+    }
+    main {
+        @include flex-grow(1);
+
+        @include flexbox();
+        @include flex-direction(row);
+
+        >div {
+            @include flex(0,0,(100% / 3));
+
+            @include flexbox;
+            @include flex-direction(column);
+
+            &:not(:last-child){
+                border-right: 1px solid #e1e1e1;
+                box-sizing: border-box;
+            }
+
+            >h1 {
+                color: #20333e;
+                font-size: 20px;
+                border-bottom: 1px solid #e1e1e1;
+                padding: 20px;
+                box-sizing: border-box;
+                font-weight: 700;
+            }
+
+            &.timeline {
+                @include flex-grow(1);
+                .tweets{
+                    overflow-y: auto;
+                    .tweet {
+                        border-bottom: 1px solid #e1e1e1;
+                        padding: 20px;
+                        box-sizing: border-box;
+
+                        @include flexbox;
+                        @include flex-direction(row);
+
+                        .photo {
+                            img {
+                                width: 54px;
+                                height: 54px;
+
+                                border-radius: 8px;
+                            }
+                        }
+                        .details {
+                            padding-left: 20px;
+                            box-sizing: border-box;
+                            @include flex-grow(1);
+                            header {
+                                @include flexbox;
+                                @include flex-direction(row);
+
+                                @include justify-content(space-between);
+
+                                margin-bottom: 10px;
+
+                                div {
+                                    h1 {
+                                        font-size: 18px;
+                                        font-weight: 700;
+                                        color: #20333e;
+                                        display: inline-block;
+                                        margin-right: 15px;
+                                    }
+                                    a {
+                                        color: #7dc9f8;
+                                        font-size: 16px;
+                                        font-weight: 400;
+                                        text-decoration: none;
+                                        display: inline-block;
+                                    }
+                                }
+                                h3 {
+                                    color: #ccc;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                }
+                            }
+                            p {
+                                font-size: 18px;
+                                font-weight: 400;
+                                color: #666;
+                                line-height: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.following {
+                @include flex-grow(1);
+                .followers {
+                    overflow-y: auto;
+                    .follower {
+                        border-bottom: 1px solid #e1e1e1;
+                        padding: 20px;
+                        box-sizing: border-box;
+
+                        @include flexbox;
+                        @include flex-direction(row);
+                        @include justify-content(space-between);
+                        .details {
+                            img {
+                                display: inline-block;
+                                margin-right: 15px;
+                                border-radius: 8px;
+                            }
+                            .names {
+                                display: inline-block;
+                                vertical-align: top;
+                                margin-top: 3px;
+                                h1 {
+                                    font-size: 18px;
+                                    color: #20333e;
+                                    font-weight: 700;
+                                    margin-bottom: 7px;
+                                }
+                                a {
+                                    text-decoration: none;
+                                    color: #7dc9f8;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.dms {
+                .alldadms {
+                    padding: 20px;
+                    .dm {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-end;
+                        margin-bottom: 15px;
+                        img {
+                            width: 54px;
+                            height: 54px;
+                            border-radius: 8px;
+                            flex: 0 0 54px;
+                            margin-right: 15px;
+                        }
+                        div {
+                            flex-grow: 1;
+                            display: flex;
+                            flex-direction: column;
+                            p {
+                                background: #a86cc6;
+                                padding: 10px 15px;
+                                border-radius: 20px;
+                                color: white;
+                                font-size: 16px;
+                                font-weight: 400;
+                                margin-bottom: 8px;
+                                position: relative;
+                                
+                                &::after {
+                                    content: "";
+                                    display: block;
+                                    position: absolute;
+                                    left: -8px;
+                                    bottom: 0px;
+                                    background: #a86cc6 url(../images/message-tail.svg) no-repeat;
+                                    width: 16px;
+                                    height: 20px;
+                                }
+                            }
+                            h3 {
+                                color: #999;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        background: #e8f5fe;
+        padding: 20px 15px;
+        border-top: 1px solid #d4edfd;
+        box-sizing: border-box;
+    }
+}

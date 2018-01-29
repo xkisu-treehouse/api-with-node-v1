@@ -1,0 +1,37 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'scss' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.3
+4 verbose run-script [ 'prescss', 'scss', 'postscss' ]
+5 info lifecycle api-with-node-v1@1.0.0~prescss: api-with-node-v1@1.0.0
+6 silly lifecycle api-with-node-v1@1.0.0~prescss: no script for prescss, continuing
+7 info lifecycle api-with-node-v1@1.0.0~scss: api-with-node-v1@1.0.0
+8 verbose lifecycle api-with-node-v1@1.0.0~scss: unsafe-perm in lifecycle true
+9 verbose lifecycle api-with-node-v1@1.0.0~scss: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;F:\Treehouse\api-with-node-v1\node_modules\.bin;C:\VulkanSDK\1.0.65.1\Bin;C:\Python27\;C:\Python27\Scripts;C:\Program Files\ImageMagick-6.9.3-Q16;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\git\cmd;D:\Program Files\MiKTeX 2.9\miktex\bin\x64\;D:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Mitov\Visuino;C:\Program Files\CMake\bin;C:\Program Files\WorldPainter;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\Ruby23-x64\bin;C:\Python27;C:\Python27\Scripts;C:\Users\ldd20\AppData\Local\Microsoft\WindowsApps;C:\Users\ldd20\AppData\Roaming\Composer\vendor\bin;C:\Program Files\Java\jdk1.8.0_65\bin;C:\Program Files\Oracle\VirtualBox;D:\Adobe\PhoneGap\PhoneGap Desktop;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\ldd20\AppData\Roaming\npm;F:\asprite;D:\maven\bin
+10 verbose lifecycle api-with-node-v1@1.0.0~scss: CWD: F:\Treehouse\api-with-node-v1
+11 silly lifecycle api-with-node-v1@1.0.0~scss: Args: [ '/d /s /c',
+11 silly lifecycle   'cd ./public/styles/src && sass --watch style.scss:../style.css --sourcemap=none' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at exports._errnoException (util.js:1018:11)
+12 verbose stack     at process.kill (internal/process.js:190:13)
+12 verbose stack     at process.listener (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+12 verbose stack     at emitNone (events.js:91:20)
+12 verbose stack     at process.emit (events.js:185:7)
+12 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at Signal.wrap.onsignal (internal/process.js:217:44)
+13 verbose cwd F:\Treehouse\api-with-node-v1\public
+14 error Windows_NT 10.0.14393
+15 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "scss"
+16 error node v6.10.3
+17 error npm  v3.10.10
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]
